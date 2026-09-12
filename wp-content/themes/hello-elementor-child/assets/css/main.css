@@ -1,0 +1,478 @@
+/* Start Beer Slider */
+
+.slider-wrapper {
+	max-width: 1200px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.beer-slider .slick-prev {
+  position: absolute;
+  left: 10%;
+  width: 100px;
+  top: 35%;
+  z-index: 111;
+  transform: rotate(180deg);
+}
+.beer-slider .slick-next {
+  position: absolute;
+  right: 10%;
+  width: 100px;
+  top: 35%;
+  z-index: 111;
+  transform: rotate(180deg);
+}
+.beer-slider .arrow {
+  top: calc(50% - 20px);
+}
+.beer-slider .arrow.arrow-right {
+  right: -35px;
+}
+.beer-slider .arrow.arrow-left {
+  left: -35px;
+}
+.beer-slider .arrow.slick-disabled {
+  opacity: 0.4;
+  cursor: initial;
+}
+.beer-slider .beer-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  min-height: 570px;
+  padding-top: 60px;
+}
+.beer-slider .beer-image {
+  width: 100%;
+}
+.beer-slider .beer-image img {
+  transform: scale(0.6);
+  margin: 0 auto;
+  transition: all 0.5s;
+  display: inline-block;
+}
+.slick-slider
+  .beer-slide.slick-slide.slick-active.slick-center
+  + .slick-active {
+  text-align: end;
+}
+
+
+.beer-info-bundle {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 5px;
+}
+.beer-slider .beer-info {
+  width: 75%;
+  overflow: hidden;
+  opacity: 0;
+  transition: none;
+  position: absolute;
+  top: 60px;
+  right: -20%;
+  line-height: 1.1;
+  letter-spacing: 0px;
+  padding-left: 15px;
+}
+
+.beer-slider .beer-info h3 {
+font-family: "PANTONRUSTBLACK-TRIAL-GR", Sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.9px;
+  text-align: center;
+  font-size: 35px;
+  margin: 0 0 10px 0;
+}
+
+.title-and-description-mobile-only h3 {
+font-family: "PANTONRUSTBLACK-TRIAL-GR", Sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.9px;
+}
+.beer-slider .beer-info h5 {
+  font-size: 16px;
+  text-align: center;
+}
+.beer-info-bundle p {
+  display: flex !important;
+  flex-direction: column;
+}
+.beer-slider .beer-info p {
+  font-size: 14px;
+}
+.beer-slider .beer-info p b {
+  color: #325a2b;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.beer-slider .slick-center .beer-wrap {
+  width: calc(100% + 120px);
+  transform: translateX(-60px);
+}
+.beer-slider .slick-center .beer-wrap::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  top: 20px;
+  height: 95%;
+  box-shadow: -2.1px -2.1px 4px 0 #fff, 0 0 0 0 #fff, 0px 2px 2px 0 rgba(21, 45, 16, 0.15), 0px 5px 10px 0 rgba(21, 45, 16, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  border-radius: 10px;
+}
+.beer-slider .slick-center .beer-info {
+  transition: all 0.8s;
+  transition-delay: 0.2s;
+  opacity: 1;
+  right: 0;
+}
+.beer-slider .slick-center .beer-image {
+  width: 25%;
+}
+.beer-slider .slick-center .beer-image img {
+  transform: scale(0.9);
+}
+
+/*  */
+
+
+.title-and-description-mobile-only{
+  display: none;
+}
+/*  */
+/* @media only screen and (max-width: 1380px) {
+  .beer-slider {
+    width: 100%;
+  }
+} */
+
+/* @media only screen and (max-width: 1000px) and (min-width: 650px) {
+  .beer-slider .beer-wrap .beer-image img {
+    height: 350px;
+  }
+} */
+/* @media only screen and (min-width: 1130px) and (max-width: 1380px) {
+  .beer-slide.slick-slide.slick-current.slick-active.slick-center {
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    width: 80vw;
+  }
+  .beer-slider .slick-next{
+    right: 0;
+  }
+  .beer-slider .slick-prev{
+    left: 0;
+  }
+
+} */
+@media only screen and (max-width: 1280px) {
+  .beer-slider .beer-info{
+    border-left: none;
+  }
+  .beer-slider.slick-initialized.slick-slider {
+  box-shadow: -2.1px -2.1px 4px 0 #fff, 0 0 0 0 #fff, 0px 2px 2px 0 rgba(21, 45, 16, 0.15), 0px 5px 10px 0 rgba(21, 45, 16, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  }
+  .beer-slider .beer-wrap {
+    padding-top: 25px;
+  }
+  .beer-slider {
+    width: 100%;
+    padding: 10px 0;
+    min-height: initial;
+    margin: 0 auto;
+  }
+  .beer-slider .beer-info p {
+    font-size: 10px;
+    padding: 0;
+    margin: 0 0 5px;
+  }
+  .slick-list.draggable {
+    max-height: 520px;
+  }
+  .beer-slider .slick-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 50px;
+  }
+  .beer-slider .slick-next {
+    position: absolute;
+    width: 50px;
+    right: 0;
+    top: 50%;
+  }
+  .beer-slider .arrow {
+    top: calc(50% - 20px);
+  }
+  .beer-slider .arrow.arrow-right {
+    right: -35px;
+  }
+  .beer-slider .arrow.arrow-left {
+    left: -35px;
+  }
+  .beer-slider .arrow.slick-disabled {
+    opacity: 0.4;
+    cursor: initial;
+  }
+  .beer-slider .beer-wrap {
+    min-height: auto;
+  }
+  .beer-slider .beer-image {
+    width: 30%;
+    display: inline-block;
+  }
+  .beer-slider .beer-image img {
+    transform: scale(1);
+    margin: 0 auto;
+    max-height: 360px;
+  }
+  .beer-slider .beer-info {
+    width: 45vw;
+    opacity: 1;
+    position: relative;
+    top: initial;
+    right: initial;
+    line-height: normal;
+    letter-spacing: 0px;
+    padding-left: 0;
+    padding-top: 40px;
+  }
+  .beer-slider .beer-wrap {
+    width: 100%;
+    transform: translateX(0px);
+    padding-top: 110px;
+  }
+  .beer-slider .beer-info {
+    transition: all 0.8s;
+    transition-delay: 0.2s;
+    opacity: 1;
+    right: 0;
+  }
+
+@media (min-width: 768px) {
+  .slick-active {
+    width: 100%;
+    transform: translateX(0px);
+    padding-top: 110px;
+  }
+  .slick-active {
+    transition: all 0.8s;
+    transition-delay: 0.2s;
+    opacity: 1;
+    right: 0;
+  }
+}
+  /* .beer-slider .slick-active .beer-image {
+    width: 25%;
+  } */
+  .beer-slider .slick-active .beer-info {
+    text-align: left;
+    max-width: 50vw;
+  }
+  .title-and-description-mobile-only{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .title-and-description-mobile-only h5 p{
+    font-size: 13px;
+    border-bottom: solid 2px;
+    padding-bottom: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .beer-slider .beer-wrap{
+    justify-content: center;
+    padding-top: 100px;
+  }
+  .title-and-description-mobile-only h3 {
+    font-size: 30px;
+  }
+  .beer-slider .beer-info h3,.beer-info h5{
+    display: none;
+  }
+}
+
+/* End Beer Slider */
+.thirty-procent-background {
+  background: linear-gradient(
+    to bottom,
+    #f1f5ed 0%,
+    #f1f5ed 30%,
+    #ffffff 30%,
+    #ffffff 100%
+  );
+}
+.fifty-five-background {
+  background: linear-gradient(
+    to bottom,
+    #f1f5ed 0%,
+    #f1f5ed 55%,
+    #ffffff 55%,
+    #ffffff 100%
+  );
+}
+.dotted_line {
+  border-top: solid 1px #335a2b;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  z-index: -1;
+}
+.dotted-line-menu {
+  border-top: solid 1px #335a2b;
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  z-index: 0;
+}
+@media only screen and (max-width: 1150px) and (min-width: 1000px) {
+  .beer-slider .slick-next{
+    right: 0;
+  }
+  .beer-slider .slick-prev{
+    left: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .thirty-procent-background.fifty-five-background {
+    background: #f1f5ed;
+  }
+  .fifty-five-background {
+    background: #f1f5ed;
+  }
+
+  .dotted_line {
+    top: 47%;
+  }
+}
+@media only screen and (max-width: 1280px) and (min-width: 790px) {
+  .beer-slider .slick-next,.beer-slider .slick-prev{
+    width: 80px !important;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .beer-slide.slick-slide.slick-current.slick-active.slick-center {
+     width: 620px;
+  }
+
+  .slick-slide {
+    width: 620px;
+  }
+  
+.beer-slider {
+  width: 1360px;
+  padding: 12px 0;
+  min-height: 750px;
+  margin: 0 auto;
+}
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .slick-list.draggable {
+    max-height: 100%;
+  }
+  .beer-slider .slick-prev{
+    width: 30px;
+  }
+  .beer-slider .slick-next{
+    width: 30px;
+  }
+  .beer-slider .beer-info {
+  line-height: 11px;
+  }
+  
+  .beer-slider .beer-image {
+    width: 35%;
+  }
+
+  .beer-slider  .beer-wrap {
+    align-items: center;
+  }
+  .title-and-description-mobile-only h5 p{
+    border-bottom: none !important;
+  }
+}
+
+
+:root {
+  --e-global-color-primary: #1f3d2b;
+
+  --e-global-color-secondary: #4e4c4c;
+
+  --e-global-color-text: #1d1d1d;
+
+  --e-global-color-accent: #ffeca7;
+}
+
+a , .woocommerce-loop-product__title{
+  color: #1f3d2b;
+}
+
+a:hover,.woocommerce-loop-product__title:hover {
+  color: #1f3d2b;
+}
+
+.elementor-button {
+  background-color: #1f3d2b;
+}
+/* WooCommerce buttons */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: #1f3d2b;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+    background-color: #1f3d2b;
+    color: #ffffff;
+}
+
+/* Prices */
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce ul.products li.product .price {
+    color: #1f3d2b;
+}
+
+/* Sale badge */
+.woocommerce span.onsale {
+    background-color: #1f3d2b;
+    color: #ffffff;
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt.disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt.disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled[disabled], .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled[disabled]:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt.disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt.disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled[disabled], .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled[disabled]:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled[disabled], .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled[disabled]:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt.disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt.disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled[disabled], .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled[disabled]:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt.disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt.disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled[disabled], :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled[disabled]:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt.disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt.disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled[disabled], :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled[disabled]:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt.disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt.disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled[disabled], :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled[disabled]:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt.disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt.disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled[disabled], :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled[disabled]:hover {
+    background-color: #1f3d2b;
+    color: #ffffff;
+}
+a {
+    background-color: transparent;
+    color: #1f3d2b;
+    text-decoration: none;
+}

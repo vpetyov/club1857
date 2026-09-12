@@ -1,0 +1,126 @@
+/*
+Theme Name: Porter Pub Child
+Theme URI: http://cmsmasters.net/porter-pub-child/
+Author: cmsmasters
+Author URI: http://cmsmasters.net/
+Description: Porter Pub Child Theme
+Template: porter-pub
+Version: 1.0.0
+License:
+License URI:
+Text Domain: porter-pub-child
+Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+.cmsmasters_product_cat.entry-meta,
+.cmsmasters_product_info_wrap {
+	display: none !important;
+}
+
+table.tribe-events-calendar thead th {
+	font-size: 20px;
+}
+
+.tribe-events-future.tribe-events-has-events .custom-event-start_date {
+	font-size: 16px;
+}
+
+.custom-event-link {
+	font-size: 14px;
+}
+
+.user-agreement-checkbox {
+	font-size: 16px !important;
+	line-height: 25px !important;
+}
+
+.events-section .event-dates-slider .event-date>.date {
+	font-size: 22px !important;
+}
+
+.tribe-events-sub-nav li a,
+.tribe-events-sub-nav>span a {
+	font-size: 20px !important;
+}
+
+.single-tribe_events .headline_inner {
+	display: none !important;
+}
+
+.header_mid,
+.header_mid input:not([type=button]):not([type=checkbox]):not([type=file]):not([type=hidden]):not([type=image]):not([type=radio]):not([type=reset]):not([type=submit]):not([type=color]):not([type=range]),
+.header_mid textarea,
+.header_mid select,
+.header_mid option,
+.header_mid .button,
+.header_mid .cmsmasters_button {
+	background-color: rgba(50, 90, 43, 1);
+}
+
+#tribe-events-sub-nav span.tribe-events-nav-next a {
+	padding-right: 30px;
+	padding-left: 0;
+	font-size: 22px;
+}
+
+#tribe-events-sub-nav span.tribe-events-nav-previous a {
+	font-size: 22px;
+}
+
+.single-tribe_events .tribe-events-meta-group {
+	display: none !important;
+}
+
+.cmsmasters_single_event_header_right,
+.tribe-events-ical {
+	display: none !important;
+}
+
+html .cmsmasters_color_scheme_third ::selection {
+	background: rgba(50, 90, 43) !important;
+}
+.cmsmasters_menu_item .menu_title {
+    margin: 0px !important;
+	font-weight:bold;
+}
+
+.product a {
+	cursor: default;
+}
+
+@media only screen and (max-width: 500px) {
+	.events-section .event-slider .event-slide .event-wrap .single-event {
+		height: 200px !important;
+		background-position: top center !important;
+		background-repeat: no-repeat !important;
+		background-size: contain !important;
+	}
+}
+
+/* SOCIAL ICONS FOOTER*/
+.social_links a img{
+	width:55px;
+	height:55px;
+	margin:10px;
+}
+
+div.cmsmasters_single_product .cart button.single_add_to_cart_button {
+    width: 210px !important;
+    margin: 0px !important;
+    display: inline-block !important;
+}
+
+*::selection {
+    color:#325a2b !important;
+}
+
+*::-moz-selection {
+    color:#325a2b !important;
+}
+
+.cmsmasters_menu_item .menu_feature_list li{
+	color: #4b6d44;
+}
+.cmsmasters_menu_price_wrap{
+display:none !important;
+}

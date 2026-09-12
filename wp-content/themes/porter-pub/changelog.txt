@@ -1,0 +1,141 @@
+/**
+ * @package 	WordPress
+ * @subpackage 	Porter Pub
+ * @version 	1.2.1
+ */
+ 
+-----------------------------------------------------------------------
+				CHANGELOG
+-----------------------------------------------------------------------
+Version 1.2.1:
+	
+	1. Fixed header overlaps by default option
+	2. Fixed twitter
+	3. Fixed pagination in shortcodes
+	4. Updated plugins
+	
+--------------------------------------
+Version 1.2.0:
+	
+	1. Fixed WooCommerce dynamic cart
+	2. Updated WooCommerce template
+	3. Updated plugins
+--------------------------------------
+Version 1.1.9:
+
+	1. Fixed tribe event series
+	2. Updated plugins
+--------------------------------------
+Version 1.1.8:
+
+	1. Fix for webp format in jQuery iLightBox
+	2. Fixed custom fonts in gutenberg editor.
+	3. Fixed fatal error on PHP 8
+	4. Updated Woocommerce template
+	5. Updated plugins
+	6. Updated translates
+--------------------------------------
+Version 1.1.7:
+
+	1. Fixed pingbacks & trackbacks
+	2. Fixed twitter connection
+	3. Updated plugins
+	4. Updated translates
+--------------------------------------
+Version 1.1.6:
+
+	1. Updated plugins
+--------------------------------------
+Version 1.1.5:
+
+	1. Fixed hover slider script
+	2. Fixed behavior section setting for Posts Slider, Pricing Table and Gallery shortcodes.
+	3. Fixed The Events Calendar updated design
+	4. Updated plugins
+--------------------------------------
+Version 1.1.4:
+
+	1. Update Plugins
+	2. Small fixes for The Events Calendar updated design
+--------------------------------------
+Version 1.1.3:
+
+	1. Update Plugins
+	2. Update Translate
+	3. Fixed demo content
+	4. Fixed The Events Calendar updated design
+--------------------------------------
+Version 1.1.2:
+
+	1. Added function wp_body_open()
+	2. Fixed jQuery Migrate notices
+	3. Fixed Load More
+	4. Fix for short syntax in js <div />
+	5. Fix iLightbox
+	6. Fix register settings
+	7. Added deprecated function for Flickr widget
+	8. Update isotope js
+	9. Update Plugins
+	10. Update Translate
+--------------------------------------
+Version 1.1.1:
+
+	1. revslider 6.3.3
+	2. CC update (WP 5.6 section and column update fix)
+--------------------------------------
+Version 1.1.0:
+
+	1. revslider 6.3.0
+	2. Woo update
+	3. Envato theme check fix
+	4. Variable product fix
+	5. Yoast SEO breadcrumbs fix
+	6. Fix for "Disable WooCommerce Cart" on mobile
+	7. Shop sidebar fix
+	8. Classic Editor fix
+	9. PHP 7.4 implode fix
+	10. Gutenberg notices and CC button fixes
+	11. CC update
+	12. Update isotope
+	13. WP 5.6 columns fix
+	14. WP 5.6 drag'n'drop fix
+	15. WP 5.6 pop-up fix
+	16. Update LightBox isotope
+	17. WP 5.6 import demo content fix
+	18. TGMPA fix
+--------------------------------------
+Version 1.0.9:
+
+	1. WP 5.5 Color Picker fix
+	2. Removed Form Builder plugin
+	3. LayerSlider 6.11.2
+--------------------------------------
+Version 1.0.8:
+
+	1. Updated WooCommerce
+	2. Updated plugins
+--------------------------------------
+Version 1.0.7:
+
+	1. Added One Click Demo Import
+	2. Updated Content Composer
+	3. Updated Contact Form Builder
+	4. Added support Gutenberg and WordPress 5.0
+	5. Fixed some bugs
+--------------------------------------
+Version 1.0.6:
+
+	1. Update RevSlider
+	2. Update for Gutenberg
+--------------------------------------
+Version 1.0.5:
+
+	1. Updated LayerSlider
+	2. Updated revslider
+	3. Updated Content Composer
+	4. Updated Contact Form Bulider
+	5. Updated Evanto Market
+	6. Updated themes for WP 4.9.6 / Privacy Policy
+	7. Updated WooCommerce 3.4.0
+	8. Added functional "Sticky column"
+--------------------------------------

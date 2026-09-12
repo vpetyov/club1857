@@ -1,0 +1,74 @@
+version: "3" 
+# Defines which compose version to use
+services:
+  # Services line define which Docker images to run. In this case, it will be MySQL server and WordPress image.
+  db:
+    image: mysql
+    # image: mysql:5.7 indicates the MySQL database container image from Docker Hub used in this installation.
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: MyR00tMySQLPa$$5w0rD
+      MYSQL_DATABASE: MyWordPressDatabaseName
+      MYSQL_USER: MyWordPressUser
+      MYSQL_PASSWORD: Pa$$5w0rD
+      # Previous four lines define the main variables needed for the MySQL container to work: database, database username, database user password, and the MySQL root password.
+      
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_USER: MyWordPressUser
+      PMA_PASSWORD: Pa$$5w0rD
+      MYSQL_ROOT_PASSWORD: root_password
+      UPLOAD_LIMIT: 512M  # Change this value as needed
+    ports:
+      - "8080:80"
+    volumes:
+      ["./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini"]
+  redis:
+    image: redis:7.4-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+  wordpress:
+    depends_on:
+      - db
+      - redis
+    image: wordpress:5.7
+    user: 1000:1000
+    restart: always
+    # Restart line controls the restart mode, meaning if the container stops running for any reason, it will restart the process immediately.
+    ports:
+      - "8000:80"
+      # The previous line defines the port that the WordPress container will use. After successful installation, the full path will look like this: http://localhost:8000
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: MyWordPressUser
+      WORDPRESS_DB_PASSWORD: Pa$$5w0rD
+      WORDPRESS_DB_NAME: MyWordPressDatabaseName
+      WORDPRESS_CONFIG_EXTRA: |
+        /* Additonals */
+        define('FS_METHOD', 'direct' );
+# Similar to MySQL image variables, the last four lines define the main variables needed for the WordPress container to work properly with the MySQL container.
+    volumes:
+      ["./:/var/www/html", 
+      "./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini"]
+  wpcli:
+    depends_on:
+      - db
+      - wordpress
+    image: wordpress:cli
+    user: 1000:1000
+    command: tail -f /dev/null
+    volumes:
+      ["./:/var/www/html","./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini"]
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: MyWordPressUser
+      WORDPRESS_DB_PASSWORD: Pa$$5w0rD
+      WORDPRESS_DB_NAME: MyWordPressDatabaseName
+volumes:
+  mysql: {}
+      
