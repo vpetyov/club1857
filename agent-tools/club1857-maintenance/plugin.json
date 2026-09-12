@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "club1857-maintenance",
+  "version": "0.1.0",
+  "description": "Development and verification workflows for the Club1857 WordPress site."
+}
