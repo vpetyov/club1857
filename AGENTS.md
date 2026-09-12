@@ -39,3 +39,13 @@ Keep credentials, SQL backups, logs, and uploads out of commits. Review local da
 ## Agent Workflows
 
 Use [Club1857 Maintenance](agent-tools/club1857-maintenance/README.md) for child-theme development, local diagnostics, and template reviews. Its portable skills require client loading or explicit reference; repository rules remain here.
+
+## Do / Don't
+
+**Don't:**
+- Don't run `git commit` or `git push`. Make the code changes and leave them for the user to review and commit themselves.
+- Don't make changes to the plugins without reviewing their impact and ensuring compatibility with the custom theme.
+- Don't add yourself as a contributor in the project files, PRs, or any documentation.
+
+**Do:**
+- Try to always hook into WordPress actions and filters rather than modifying wp core files or plugins which are not created by me directly.
