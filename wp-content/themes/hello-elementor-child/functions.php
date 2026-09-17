@@ -1,9 +1,16 @@
 <?php
 
 function enqueue_parent_styles() {
-    wp_enqueue_script('jquery-3.7.1', 'https://code.jquery.com/jquery-3.7.1.min.js');
-    wp_enqueue_script('slick-slider-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
-    wp_enqueue_style('slick-slider-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+    if ( is_admin() ) {
+        return;
+    }
+    wp_enqueue_script(
+        'club1857-custom-js',
+        get_stylesheet_directory_uri() . '/assets/js/custom.js',
+        array('jquery'),
+        filemtime(get_stylesheet_directory() . '/assets/js/custom.js'),
+        true
+    );
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/assets/css/main.css');
     wp_enqueue_style('main2-css', get_stylesheet_directory_uri() . '/assets/css/main2.css');
