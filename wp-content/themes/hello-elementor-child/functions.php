@@ -30,16 +30,27 @@ add_shortcode( 'beer_slider', 'beer_slider_shortcode' );
 /**
  * Shortcode to display the event excerpt.
  *
- * Usage: [event_excerpt]
+ * Usage: [event_excerpt] or [event_excerpt words="30"]
  */
-function custom_event_excerpt_shortcode() {
+function custom_event_excerpt_shortcode( $atts ) {
     // Ensure we are in an event post context
     if ( function_exists('get_post_type') && 'tribe_events' !== get_post_type() ) {
         return '';
     }
 
     if ( function_exists('tribe_events_get_the_excerpt') ) {
-        return tribe_events_get_the_excerpt();
+        $atts = shortcode_atts(
+            array(
+                'words' => 20,
+            ),
+            $atts,
+            'event_excerpt'
+        );
+
+        $word_limit = max( 1, absint( $atts['words'] ) );
+        $excerpt    = wp_strip_all_tags( tribe_events_get_the_excerpt(), true );
+
+        return esc_html( wp_trim_words( $excerpt, $word_limit, '…' ) );
     }
 
     return '';
