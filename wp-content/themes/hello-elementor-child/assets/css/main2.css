@@ -1,120 +1,3 @@
-#mainheader{
-box-shadow: 0px 2px 2px 0 rgba(21, 45, 16, 0.15), 0px 5px 10px 0 rgba(21, 45, 16, 0.1)!important;
-}
-
-.wpml-ls-flag{
-    padding-top: 1.5px;
-}
-
-
-/* Mobile and Tablet styles for the menu*/
-
-@media (min-width:260px) and (max-width: 320px){
-.logo img {
-    width: 160px!important;
-}
-	.hfe-menu-item {
-    padding-left:20px!important;
-}
-	
-}
-
- @media (min-width:260px) and (max-width: 1024px){
-.hfe-nav-menu li:first-child {
-    padding-top: 20px;
-}
-
-.hfe-nav-menu li:last-child {
-    padding-bottom: 20px;
-}
-
-}
-
-
-@media (max-width: 480px){
-	.hfe-dropdown{
-    margin-left: 38.3vw;
-    width: 100%!important;
-	margin-top:9vw;
-    margin-bottom: -9vw;
-}
-}
-
-
-@media (min-width:481px) and (max-width: 767px){
-	
-	.hfe-submenu-animation-none{
-	  bottom:3vw!important;
-	}
-	
-    .hfe-dropdown{
-    margin-left: 38.3vw;
-    width: 100%!important;
-	margin-top:5vw;
-    margin-bottom: -5vw;
-}
-	
-}
-
-
-@media (min-width:481px) and (max-width: 580px){
-	
-	.hfe-menu-item {
-    padding-left:45px!important;
-}
-}
-
-
-@media (min-width:581px) and (max-width: 680px){
-	
-	.hfe-menu-item {
-    padding-left:60px!important;
-}
-}
-
-
-@media (min-width:681px) and (max-width: 960px){
-	
-	.hfe-menu-item {
-    padding-left:70px!important;
-}
-}
-
-
-@media (min-width:961px) and (max-width: 1024px){
-	
-	.hfe-menu-item {
-    padding-left:85px!important;
-}
-}
-
-
-@media (min-width:768px) and (max-width: 1024px){
-	
-	.hfe-submenu-animation-none{
-	  left:-40vw!important;
-	}
-	
-	.hfe-dropdown{
-    margin-left:40vw;
-    width: 100%!important;
-	margin-top:3vw;
-    margin-bottom: -3vw;
-}	
-
-} 
-
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
- .hfe-menu-item {
-    padding-left:55px!important;
-}
-
-}
 
 
 /*
@@ -420,97 +303,53 @@ box-shadow: 0px 2px 2px 0 rgba(21, 45, 16, 0.15), 0px 5px 10px 0 rgba(21, 45, 16
 }
 */
 
-
 /* Sports bar page - split background section*/
 
 /*desktop and tablet */
-.eighthy-four-background{
-  background: linear-gradient(
-  to bottom,
-  #d2e1c2 0%,
-  #d2e1c2 84%,
-  #f1f5ed 84%,
-  #f1f5ed 100%
-  );
+.eighthy-four-background {
+  background: linear-gradient(to bottom, #d2e1c2 0%, #d2e1c2 84%, #f1f5ed 84%, #f1f5ed 100%);
 }
 
 /* mobile */
-.seventhy-eigthy-background{
-  background: linear-gradient(
-  to bottom,
-  #d2e1c2 0%,
-  #d2e1c2 78%,
-  #f1f5ed 78%,
-  #f1f5ed 100%
-  );
+.seventhy-eigthy-background {
+  background: linear-gradient(to bottom, #d2e1c2 0%, #d2e1c2 78%, #f1f5ed 78%, #f1f5ed 100%);
 }
-
 
 /* Live Clib page - split background section*/
 
 /*desktop and tablet */
-.eighthy-seventh-background{
-  background: linear-gradient(
-  to bottom,
-  #f1f5ed 0%,
-  #f1f5ed 87%,
-  #d2e1c2 87%,
-  #d2e1c2 100%
-  );
+.eighthy-seventh-background {
+  background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 87%, #d2e1c2 87%, #d2e1c2 100%);
 }
 
 /* mobile - same class name but different linear gradient as % */
-@media (max-width: 300px){
-.eighthy-seventh-background{
-  background: linear-gradient(
-  to bottom,
-  #f1f5ed 0%,
-  #f1f5ed 78%,
-  #d2e1c2 78%,
-  #d2e1c2 100%
-  );
-}
+@media (max-width: 300px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 78%, #d2e1c2 78%, #d2e1c2 100%);
+  }
 }
 
-@media (min-width:300px) and (max-width: 380px){
-   .eighthy-seventh-background{
-  background: linear-gradient(
-  to bottom,
-  #f1f5ed 0%,
-  #f1f5ed 72%,
-  #d2e1c2 72%,
-  #d2e1c2 100%
-  );
-}
+@media (min-width: 300px) and (max-width: 380px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 72%, #d2e1c2 72%, #d2e1c2 100%);
+  }
 }
 
-@media (min-width:381px) and (max-width: 480px){
-   .eighthy-seventh-background{
-  background: linear-gradient(
-  to bottom,
-  #f1f5ed 0%,
-  #f1f5ed 67%,
-  #d2e1c2 67%,
-  #d2e1c2 100%
-  );
-	}
+@media (min-width: 381px) and (max-width: 480px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 67%, #d2e1c2 67%, #d2e1c2 100%);
+  }
 }
-	
-@media (min-width:481px) and (max-width: 767px){
-   .eighthy-seventh-background{
-  background: linear-gradient(
-  to bottom,
-  #f1f5ed 0%,
-  #f1f5ed 63%,
-  #d2e1c2 63%,
-  #d2e1c2 100%
-  );
-	}
-}	
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 63%, #d2e1c2 63%, #d2e1c2 100%);
+  }
+}
 
 /* Hero Home Page Slider */
 @media (min-width: 2048px) {
-.swiper-slide-image {
-	max-width: 2048px !important;
-}
+  .swiper-slide-image {
+    max-width: 2048px !important;
+  }
 }

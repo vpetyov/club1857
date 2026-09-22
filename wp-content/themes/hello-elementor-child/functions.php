@@ -12,11 +12,22 @@ function enqueue_parent_styles() {
         true
     );
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/assets/css/main.css');
-    wp_enqueue_style('main2-css', get_stylesheet_directory_uri() . '/assets/css/main2.css');
+    // wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/assets/css/main.css');
+    // wp_enqueue_style('main2-css', get_stylesheet_directory_uri() . '/assets/css/main2.css');
  }
- 
- add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' ); 
+
+ add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+
+function club1857_enqueue_styles() {
+    wp_enqueue_style(
+        'club1857-css',
+        get_stylesheet_directory_uri() . '/assets/css/club1857.css',
+        array('parent-style'),
+        filemtime(get_stylesheet_directory() . '/assets/css/club1857.css')
+    );
+}
+
+add_action( 'wp_enqueue_scripts', 'club1857_enqueue_styles', 999 );
  
  function beer_slider_shortcode() {
     ob_start();

@@ -1,0 +1,279 @@
+:root {
+  --e-global-color-primary: #1f3d2b;
+  --e-global-color-secondary: #4e4c4c;
+  --e-global-color-text: #1d1d1d;
+  --e-global-color-accent: #ffeca7;
+}
+
+a,
+.woocommerce-loop-product__title {
+  color: #1f3d2b;
+}
+
+a:hover,
+.woocommerce-loop-product__title:hover {
+  color: #1f3d2b;
+}
+
+.elementor-button {
+  background-color: #1f3d2b;
+}
+
+/* WooCommerce buttons */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  background-color: #1f3d2b;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background-color: #1f3d2b;
+  color: #ffffff;
+}
+
+/* Prices */
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce ul.products li.product .price {
+  color: #1f3d2b;
+}
+
+/* Sale badge */
+.woocommerce span.onsale {
+  background-color: #1f3d2b;
+  color: #ffffff;
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt.disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt.disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled[disabled],
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:disabled[disabled]:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt.disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt.disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled[disabled],
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:disabled[disabled]:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled[disabled],
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:disabled[disabled]:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt.disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt.disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled[disabled],
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:disabled[disabled]:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt.disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt.disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled[disabled],
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt.disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt.disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled[disabled],
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt:disabled[disabled]:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt.disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt.disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled[disabled],
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button.alt:disabled[disabled]:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt.disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt.disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled[disabled],
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce input.button.alt:disabled[disabled]:hover {
+  background-color: #1f3d2b;
+  color: #ffffff;
+}
+
+a {
+  background-color: transparent;
+  color: #1f3d2b;
+  text-decoration: none;
+}
+
+#mainheader {
+  box-shadow: 0px 2px 2px 0 rgba(21, 45, 16, 0.15), 0px 5px 10px 0 rgba(21, 45, 16, 0.1) !important;
+}
+
+.wpml-ls-flag {
+  padding-top: 1.5px;
+}
+
+/* Mobile and Tablet styles for the menu*/
+@media (min-width: 260px) and (max-width: 320px) {
+  .logo img {
+    width: 160px !important;
+  }
+
+  .hfe-menu-item {
+    padding-left: 20px !important;
+  }
+}
+@media (min-width: 260px) and (max-width: 1024px) {
+  .hfe-nav-menu li:first-child {
+    padding-top: 20px;
+  }
+
+  .hfe-nav-menu li:last-child {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .hfe-dropdown {
+    margin-left: 38.3vw;
+    width: 100% !important;
+    margin-top: 9vw;
+    margin-bottom: -9vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .hfe-submenu-animation-none {
+    bottom: 3vw !important;
+  }
+
+  .hfe-dropdown {
+    margin-left: 38.3vw;
+    width: 100% !important;
+    margin-top: 5vw;
+    margin-bottom: -5vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 580px) {
+  .hfe-menu-item {
+    padding-left: 45px !important;
+  }
+}
+@media (min-width: 581px) and (max-width: 680px) {
+  .hfe-menu-item {
+    padding-left: 60px !important;
+  }
+}
+@media (min-width: 681px) and (max-width: 960px) {
+  .hfe-menu-item {
+    padding-left: 70px !important;
+  }
+}
+@media (min-width: 961px) and (max-width: 1024px) {
+  .hfe-menu-item {
+    padding-left: 85px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hfe-submenu-animation-none {
+    left: -40vw !important;
+  }
+
+  .hfe-dropdown {
+    margin-left: 40vw;
+    width: 100% !important;
+    margin-top: 3vw;
+    margin-bottom: -3vw;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .hfe-menu-item {
+    padding-left: 55px !important;
+  }
+}
+/* Sports bar page - split background section*/
+/*desktop and tablet */
+.eighthy-four-background {
+  background: linear-gradient(to bottom, #d2e1c2 0%, #d2e1c2 84%, #f1f5ed 84%, #f1f5ed 100%);
+}
+
+/* mobile */
+.seventhy-eigthy-background {
+  background: linear-gradient(to bottom, #d2e1c2 0%, #d2e1c2 78%, #f1f5ed 78%, #f1f5ed 100%);
+}
+
+/* Live Clib page - split background section*/
+/*desktop and tablet */
+.eighthy-seventh-background {
+  background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 87%, #d2e1c2 87%, #d2e1c2 100%);
+}
+
+/* mobile - same class name but different linear gradient as % */
+@media (max-width: 300px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 78%, #d2e1c2 78%, #d2e1c2 100%);
+  }
+}
+@media (min-width: 300px) and (max-width: 380px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 72%, #d2e1c2 72%, #d2e1c2 100%);
+  }
+}
+@media (min-width: 381px) and (max-width: 480px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 67%, #d2e1c2 67%, #d2e1c2 100%);
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .eighthy-seventh-background {
+    background: linear-gradient(to bottom, #f1f5ed 0%, #f1f5ed 63%, #d2e1c2 63%, #d2e1c2 100%);
+  }
+}
+/* Hero Home Page Slider */
+@media (min-width: 2048px) {
+  .swiper-slide-image {
+    max-width: 2048px !important;
+  }
+}
+.elementor-pagination {
+  padding-top: 20px;
+}
+@media screen and (max-width: 600px) {
+  .elementor-pagination {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.elementor-pagination .prev,
+.elementor-pagination .next {
+  font-family: "Akrobat", Sans-serif;
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important;
+  background: #1f3d2b !important;
+  padding: 7px 25px !important;
+  border-radius: 5px 5px 5px 5px;
+  text-transform: uppercase !important;
+  min-width: 250px;
+}
+.elementor-pagination .prev:hover,
+.elementor-pagination .next:hover {
+  color: #ffeca7 !important;
+}
+@media screen and (max-width: 600px) {
+  .elementor-pagination .prev,
+.elementor-pagination .next {
+    margin: 0 !important;
+  }
+}
