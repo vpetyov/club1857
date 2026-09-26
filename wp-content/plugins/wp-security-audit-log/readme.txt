@@ -5,8 +5,8 @@ License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: activity log, event log, user tracking, logger, history 
 Requires at least: 5.5
-Tested up to: 7.0.2
-Stable tag: 5.6.5
+Tested up to: 7.1.2
+Stable tag: 5.6.7
 Requires PHP: 7.4
 
 The #1 user-rated activity log plugin for event logging, activity monitoring and change tracking.
@@ -239,43 +239,33 @@ These capabilities make WP Activity Log a **comprehensive solution for site secu
 
 == Changelog ==
 
-= 5.6.5 (2026-07-21) =
+= 5.6.7 (2026-09-22) =
 
- * **New activity log event IDs** 
+ * **Security fix**
 
-	 *  Event ID 6073 – Requested to change the Administrator email address. The event records the current and requested addresses across single sites, multisite networks, and individual subsites.
-
- * **New features & functionality** 
-
-	 *  Added multisite filtering options for mirrored activity logs, allowing selected subsites to be excluded from data sent to external integrations.
-	 *  Added a dismissible post-update banner highlighting Premium monitoring and alerting features.
-	 *  Added an “Add note” prompt to the Free activity log inspector for selected high-value events. The prompt opens a modal explaining the activity log notes available in Premium.
-
- * **Security fix** 
-
-	 *  Fixed a CSRF vulnerability reported by Levon Balyan.
+	 *  Fixed an Administrator SQL Injection responsibly reported by Ananda Dhakal.
 
  * **Functionality & plugin improvements**
 
-	 *  Hardened Activity Log AJAX handlers with stricter nonce verification, capability checks, and input validation.
-	 *  Hardened request handling in Premium user session management and removed obsolete code.
-	 *  Enforced nonce verification before legacy settings save and import callbacks can run.
-	 *  Updated AI connector events `6081` and `6082` to High severity.
-	 *  Replaced the large post-update changelog banner with a smaller, dismissible notification linking to the changelog.
-	 *  Added standard UTM tracking parameters to the Melapress link in the plugin header and menu.
-	 *  Updated the bundled jQuery UI CSS for improved compatibility with the version included in WordPress.
+	 *  Updated the External DB mirroring screen to use the plugin’s existing Select2 4.0.13 library instead of the legacy version.
+	 *  Improved multisite access checks for event details, the activity log viewer, and the Latest Events widget to respect site-level viewing permissions.
+	 *  Improved search input handling in post-title and post-ID searches in plugin settings and Select2 fields.
+	 *  Event `2008` (permanent post deletion) now identifies **System** as the actor and displays the server’s IP address for deletions triggered by WordPress cron, scheduled trash cleanup, or WP-CLI.
 
  * **Bug fixes**
 
-	 *  Fixed Activity Log icon alignment issues introduced by WordPress 7.0.1 styling changes.
-	 *  Fixed broken WP Activity Log styling in the MainWP dashboard after updating to WordPress 7.0.
-	 *  Fixed clearing Activity Log search results from MainWP redirecting users outside the site.
-	 *  Fixed the Redirection sensor returning `null` from the `rest_dispatch_request` filter when REST route callbacks use closures. This could discard responses supplied by WordPress or other plugins, including optimized WooCommerce REST responses. Thanks to Paul from WooCommerce POS for reporting this issue.
-	 *  Fixed invalid MySQL connection settings being saved under *Integrations → Connections*. New connections that fail validation are no longer saved, while failed edits preserve the previous settings and display the MySQL error. Connection attempts to unreachable hosts are now limited by PHP’s `default_socket_timeout`.
-	 *  Fixed the Archiving tab’s **Test Connection** button incorrectly reporting success when the database connection failed.
-	 *  Fixed mirroring exclusion selectors remaining open when multiple selectors were expanded.
-	 *  Fixed the custom Slack recipient for built-in notification event `2046` not being saved or used.
-	 *  Fixed Activity Log search returning no results in the Free edition in some environments.
-	 *  Fixed Administrator email change events on multisite subsites. Requested changes are recorded with event `6073`, while confirmed changes continue to use event `6003` and are associated with the correct subsite.
+	 *  Fixed user session policies for individual roles requiring the global session policies setting to be enabled.
+	 *  Fixed a banner styling conflict with Ultimate WordPress Auction Plugin that affected the activity log layout.
+	 *  Fixed missing refund amounts in WooCommerce order refund event `9041`.
+	 *  Fixed the custom notifications database table being left behind when uninstalling the plugin with **Delete all data on uninstall** enabled.
+	 *  Fixed event `2002` (modified post) being logged when a more specific event, such as `2065` (modified content), already covers the change.
+	 *  Fixed a fatal PHP error that prevented application password revocation when BuddyBoss or another plugin updated unrelated user metadata during the request.
+	 *  Fixed monthly reports missing activity from the last day of the month.
+	 *  Fixed event `9154` (opened a WooCommerce order) being logged again when the order page reloaded after saving changes.
+	 *  Fixed the basic search option disappearing after disconnecting a license.
+	 *  Fixed a fatal PHP error and missing event `5704` when duplicating a Gravity Forms form without notifications.
+	 *  Fixed auto-refresh on the User Sessions page and made the refresh notice available for translation.
+	 *  Fixed an issue with WP Mail SMTP’s **Force From Email** setting, which could cause email delivery failures.
+	 *  Fixed client IP detection when the selected proxy header contains multiple addresses, rather than recording the full address list or `Unknown`.
 
 Refer to the complete [plugin changelog](https://melapress.com/support/kb/wp-activity-log-plugin-changelog/?utm_source=wp+repo&utm_medium=repo+link&utm_campaign=wordpress_org&utm_content=wsal) for more detailed information about what was new, improved and fixed in previous version updates of WP Activity Log.

@@ -350,7 +350,27 @@ class WCML_Multi_Currency {
 			}
 		}
 
-		return apply_filters( 'wcml_exchange_rates', $this->exchange_rates );
+		$exchange_rates = apply_filters( 'wcml_exchange_rates', $this->exchange_rates );
+		if ( ! is_array( $exchange_rates ) ) {
+			return [];
+		}
+
+		foreach ( $exchange_rates as $code => $rate ) {
+			if ( ! is_numeric( $rate ) ) {
+				unset( $exchange_rates[ $code ] );
+				continue;
+			}
+
+			$rate = (float) $rate;
+			if ( ! is_finite( $rate ) || $rate <= 0 ) {
+				unset( $exchange_rates[ $code ] );
+				continue;
+			}
+
+			$exchange_rates[ $code ] = $rate;
+		}
+
+		return $exchange_rates;
 	}
 
 	public function get_client_currency() {

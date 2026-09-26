@@ -101,7 +101,20 @@ class WCML_Multi_Currency_Configuration {
 
 	}
 
-	public static function add_currency( $currency_code ) {
+	public static function add_currency( $currency_code, $rate = null ) {
+		if ( null === $rate ) {
+			$rate = filter_input( INPUT_POST, 'currency_value', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+		}
+
+		if ( ! is_numeric( $rate ) ) {
+			wp_send_json_error( 'Invalid exchange rate.' );
+		}
+
+		$rate = (float) $rate;
+		if ( ! is_finite( $rate ) || $rate <= 0 ) {
+			wp_send_json_error( 'Invalid exchange rate.' );
+		}
+
 		$settings = self::$woocommerce_wpml->get_settings();
 
 		foreach ( getSitePress()->get_active_languages() as $language ) {
@@ -109,7 +122,7 @@ class WCML_Multi_Currency_Configuration {
 				$settings['currency_options'][ $currency_code ]['languages'][ $language['code'] ] = 1;
 			}
 		}
-		$settings['currency_options'][ $currency_code ]['rate']    = (float) filter_input( INPUT_POST, 'currency_value', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+		$settings['currency_options'][ $currency_code ]['rate']    = $rate;
 		$settings['currency_options'][ $currency_code ]['updated'] = date( 'Y-m-d H:i:s' );
 
 		$wc_currency = wcml_get_woocommerce_currency_option();
@@ -133,6 +146,19 @@ class WCML_Multi_Currency_Configuration {
 		$options = $data['currency_options'];
 
 		$currency_code = $options['code'];
+
+		if ( $wc_currency !== $currency_code
+			&& ( isset( $options['rate'] ) || ! isset( self::$multi_currency->currencies[ $currency_code ] ) )
+		) {
+			if ( ! is_numeric( $options['rate'] ?? null ) ) {
+				wp_send_json_error( 'Invalid exchange rate.' );
+			}
+
+			$options['rate'] = (float) $options['rate'];
+			if ( ! is_finite( $options['rate'] ) || $options['rate'] <= 0 ) {
+				wp_send_json_error( 'Invalid exchange rate.' );
+			}
+		}
 
 		if ( isset( $options['gatewaysSettings'] ) ) {
 
@@ -160,7 +186,7 @@ class WCML_Multi_Currency_Configuration {
 			$options['decimal_sep']  = wc_format_option_price_separators( null, null, $options['decimal_sep'] );
 
 			if ( ! isset( self::$multi_currency->currencies[ $currency_code ] ) ) {
-				self::add_currency( $currency_code );
+				self::add_currency( $currency_code, $options['rate'] );
 			}
 
 			foreach ( self::$multi_currency->currencies[ $currency_code ] as $key => $value ) {
@@ -213,6 +239,8 @@ class WCML_Multi_Currency_Configuration {
 		if ( ! wp_verify_nonce( $nonce,  WCML\Multicurrency\UI\Hooks::HANDLE ) ) {
 			wp_send_json_error( 'Invalid nonce' );
 		}
+
+		WCML_Capabilities::requireCanManageWcmlForAjax();
 	}
 
 	private static function get_data() {

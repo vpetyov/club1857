@@ -105,19 +105,28 @@ class WCML_Exchange_Rates {
 	}
 
 	public function update_exchange_rates() {
-		$currencies = $this->woocommerce_wpml->multi_currency->get_currency_codes();
-		$rates      = $this->fetch_exchange_rates_from_active_service( $currencies );
+		$currencies  = $this->woocommerce_wpml->multi_currency->get_currency_codes();
+		$rates       = $this->fetch_exchange_rates_from_active_service( $currencies );
+		$saved_rates = [];
 
 		foreach ( $rates as $to => $rate ) {
-			if ( $rate && is_numeric( $rate ) ) {
-				$this->save_exchage_rate( $to, $rate );
+			if ( is_numeric( $rate ) ) {
+				$rate = (float) $rate;
+				if ( is_finite( $rate ) && $rate > 0 ) {
+					$this->save_exchage_rate( $to, $rate );
+					$saved_rates[ $to ] = $rate;
+				}
 			}
+		}
+
+		if ( ! $saved_rates ) {
+			throw new Exception( 'No valid exchange rates were received.' );
 		}
 
 		$this->settings['last_updated'] = current_time( 'timestamp' );
 		$this->save_settings();
 
-		return $rates;
+		return $saved_rates;
 	}
 
 	public function action_update_exchange_rates() {
